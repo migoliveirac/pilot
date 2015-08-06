@@ -1,0 +1,41 @@
+
+Olá Miguel,
+
+Aqui vai a tal descrição. Qualquer dúvida, avisa. É boa prática "versionares" o código num repositório qualquer à semelhança deste projeto que apresentaste agora.
+
+Este projeto é já bastante completo e se seguires as dicas que te dei, não terás problemas nenhuns com ninguém na screening team. Não te esqueças de validar bem todos os campos, ter a consola aberta para ver erros que possam estar a ocorrer e de testar bem todos os endpoints da API e acções no website após alterações ao código / adicionar funcionalidades / corrigir bugs
+
+************
+
+Escreve uma aplicação para a gestão das despesas mensais:
+
+- O utilizador tem de ser capaz de criar uma conta e fazer login. Todos os acessos não validados devem redireccionar para a landing page da aplicação (design opcional)
+
+  - Os campos necessários para o login são: nome, email, password, confirmação da password (todos têm de ser validados, incluíndo tamanho mínimo e obrigação de 1 dígito e letra capital na password)
+
+- Uma vez feito o login o utilizador consegue ver uma lista (paginada) das suas despesas (vazio inicialmente). Deve poder criar novas despesas e editar / apagar as existentes.
+
+- Implementa também dois “cargos” com diferentes níveis de permissões (i.e. Um utilizador normal apenas pode fazer CRUD às suas próprias entradas, um gestor pode ver os dados dos e qualquer utilizador com um nível de permissões igual ou abaixo de si e dar permissões de gestor a utilizadores normais. Um admin pode ver e editar/apagar os registos de qualquer tipo de utilizador e mudar as permissões dos mesmos). Dica: Permissões numéricas são uma boa ideia e permitem estes checks de forma mais fácil e versátil (e.g. user normal - 1, manager - 10, admin - 100).
+
+- Cada despesa tem uma data, uma hora, uma descrição (texto), um valor, um tipo (dinheiro, crédito ou débito) e uma conta à qual foi creditada.
+
+  - O campo conta é uma combo box obtida a partir duma lista indicada pelo utilizador na sua página de perfil.
+
+- Os utilizadores têm também um limite de gastos diários fixo (a indicar também na página de perfil).
+
+- Deve ser possível filtrar os registos entre data/hora X até data/hora Y (e.g. gastos por dia no último mês).
+
+- Quando os registos são apresentados, as entradas dos dias que sejam superiores ao limite diário devem ser apresentadas a vermelho (ou verde em caso contrário)
+
+- A UI deve ser limpa e concisa. Não é necessário um desenho elaborado, apenas limpo e funcional.
+
+- Todas as acções devem ser feitas usando AJAX ou outra tecnologia que evite fazer refresh à página.
+
+- API REST: Todas as acções (incluíndo login e logout) devem exequíveis através da API, incluindo autenticação (uma boa forma de o fazer é gerar um token de autenticação válido por X horas quando é feito um GET a website/api/login e limpar esse mesmo token da BD quando é feito um GET a website/api/logout).
+
+- Deves ser capaz de demonstrar e explicar como funciona uma API REST e criar testes funcionais (e.g. requests no POSTMAN) que usem a API de forma direta.
+
+ - A API deve retornar mensagens de erro apropriadas (200 OK, 404 NOT FOUND, 500 INTERNAL SERVER ERROR, etc.) para ser de fácil utilização por terceiros.
+
+Cumprimentos,
+Pedro
